@@ -61,9 +61,8 @@ The project
 **routes/web.php**: Contains the routes for the application.    
 
 ## Demo images 
-![image](https://user-images.githubusercontent.com/25588619/226086365-e4526603-5b21-44da-af97-2c8c92cb03bc.png)         
-![image](https://user-images.githubusercontent.com/25588619/226086413-02026e99-ed8e-48e6-87a6-8d717b0c603d.png)   
-   
+![Capture](https://github.com/gmnyaki/bicycle-app/assets/25588619/e2f7df03-18df-4732-a903-c48c2b5e8bb4)
+![tests](https://github.com/gmnyaki/bicycle-app/assets/25588619/4e7b5d85-7afb-4daf-900e-262300bf4395)   
 
 ## Contributing  
 If you would like to contribute to this project, please fork the repository and submit a pull request.   
