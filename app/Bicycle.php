@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App;
 
@@ -11,29 +11,24 @@ namespace App;
  */
 class Bicycle
 {
-    /**
-     * @var string The color of the bicycle.
-     */
     private $color;
-
-    /**
-     * @var string The brand of the bicycle.
-     */
     private $brand;
-
-    /**
-     * @var int The current speed of the bicycle.
-     */
     private $currentSpeed = 0;
 
     /**
      * Bicycle constructor.
      *
-     * @param string $color.
-     * @param string $brand. 
+     * @param string $color The color of the bicycle.
+     * @param string $brand The brand of the bicycle.
+     *
+     * @throws \InvalidArgumentException If color or brand is empty.
      */
     public function __construct($color, $brand)
     {
+        if (empty($color) || empty($brand)) {
+            throw new \InvalidArgumentException("Color and brand must not be empty.");
+        }
+
         $this->color = $color;
         $this->brand = $brand;
     }
@@ -41,7 +36,7 @@ class Bicycle
     /**
      * Get the color of the bicycle.
      *
-     * @return string The color of the bicycle.
+     * @return string color.
      */
     public function getColor()
     {
@@ -51,7 +46,7 @@ class Bicycle
     /**
      * Get the brand of the bicycle.
      *
-     * @return string The brand of the bicycle.
+     * @return string brand.
      */
     public function getBrand()
     {
@@ -61,7 +56,7 @@ class Bicycle
     /**
      * Get the current speed of the bicycle.
      *
-     * @return int current bicycle speed.
+     * @return int currentSpeed.
      */
     public function getCurrentSpeed()
     {
@@ -73,10 +68,14 @@ class Bicycle
      *
      * @param int $speedIncrease .
      *
-     * @return int updated current speed of the bicycle.
+     * @return int current bike speed.
      */
     public function accelerate($speedIncrease)
     {
+        if ($speedIncrease < 0) {
+            throw new \InvalidArgumentException("Speed increase must be a non-negative value.");
+        }
+
         $this->currentSpeed += $speedIncrease;
         return $this->currentSpeed;
     }
